@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casio-style Scientific Calculator</title>
+<meta name="theme-color" content="#2a2c30">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="calc">
+  <div class="brand"><b>CASIO-STYLE</b><span>SCIENTIFIC · 2-line display</span></div>
+  <section class="lcd" aria-label="Display">
+    <div class="ind"><span id="iS">S</span><span id="iD">D</span><span id="iR">R</span><span id="iM">M</span></div>
+    <input id="expr" type="text" autocomplete="off" spellcheck="false" aria-label="Expression" autofocus>
+    <div id="result" aria-live="polite">0</div>
+  </section>
+  <section class="pad" id="pad" aria-label="Keypad"></section>
+  <div class="hint">Keyboard works too · Enter = · ↑/↓ replay history · Esc = AC</div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

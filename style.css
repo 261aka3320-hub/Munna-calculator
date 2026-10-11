@@ -1,0 +1,32 @@
+:root { --shell:#2a2c30; --shell2:#1d1f22; --lcd:#b9c6a6; --lcd-ink:#1b2418; --orange:#f39a2b; --red:#d9462f; }
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+body { margin:0; min-height:100vh; display:grid; place-items:center; background:#5b6068; padding:12px;
+       font-family: "Segoe UI", system-ui, sans-serif; }
+.calc { width:100%; max-width:380px; padding:18px 16px 20px; border-radius:22px 22px 40px 40px;
+        background:linear-gradient(160deg,var(--shell),var(--shell2)); box-shadow:0 18px 40px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.12); }
+.brand { display:flex; justify-content:space-between; align-items:baseline; color:#e8eaed; margin-bottom:10px; }
+.brand b { font:italic 800 1.5rem/1 "Trebuchet MS", sans-serif; letter-spacing:.04em; }
+.brand span { font-size:.7rem; color:#9aa0a8; }
+.lcd { background:var(--lcd); color:var(--lcd-ink); border-radius:8px; padding:6px 10px 8px;
+       box-shadow:inset 0 3px 8px rgba(0,0,0,.35), 0 0 0 4px #14151a; margin-bottom:16px; }
+.ind { display:flex; gap:10px; font:700 .62rem/1 monospace; min-height:12px; opacity:.85; }
+.ind span { visibility:hidden; } .ind span.on { visibility:visible; }
+#expr { width:100%; background:transparent; border:0; outline:0; color:inherit; font:600 1.15rem/1.6 "Courier New", monospace; text-align:left; }
+#result { text-align:right; font:700 2rem/1.2 "Courier New", monospace; min-height:2.4rem; overflow-x:auto; white-space:nowrap; }
+#result.err { font-size:1.2rem; }
+.pad { display:grid; grid-template-columns:repeat(5,1fr); gap:9px 7px; }
+.k { position:relative; padding-top:13px; }
+.k .sh { position:absolute; top:0; left:0; right:0; text-align:center; font-size:.62rem; color:var(--orange); font-weight:700; line-height:12px; white-space:nowrap; }
+button { width:100%; height:36px; border:0; border-radius:8px 8px 12px 12px; cursor:pointer; font:600 .88rem "Segoe UI", sans-serif;
+         color:#f2f3f5; background:linear-gradient(#4a4e55,#383b41); box-shadow:0 3px 0 #101114, inset 0 1px 0 rgba(255,255,255,.18); }
+button:active { transform:translateY(2px); box-shadow:0 1px 0 #101114; }
+button:focus-visible { outline:3px solid #6fb3ff; outline-offset:2px; }
+.num button { background:linear-gradient(#f1f2f4,#cfd2d7); color:#17181b; font-size:1.05rem; height:40px; }
+.fnk button { background:linear-gradient(#3b3e44,#2b2d32); font-size:.8rem; }
+.shift button { background:linear-gradient(#f7b84a,#e08b1b); color:#2a1a00; }
+.shift.on button { box-shadow:0 0 0 3px #fff6, 0 3px 0 #101114; }
+.del button { background:linear-gradient(#e3664f,#b9361f); color:#fff; }
+.eq button { background:linear-gradient(#52a0ff,#1f6fe0); color:#fff; font-size:1.1rem; }
+.nav button { height:28px; font-size:.75rem; background:linear-gradient(#55595f,#40434a); }
+.nav.k { padding-top:0; }
+.hint { margin-top:12px; text-align:center; font-size:.68rem; color:#8c929b; }
